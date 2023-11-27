@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: massinjapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: massinjapipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: massinjapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: massinjapipelinesjavascriptdocker 
+          image: myelviiecontainerregistry.azurecr.io/massinjapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
